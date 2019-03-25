@@ -2,15 +2,18 @@
     <div>
         <TopNav/>
         message
+        <BottomNav/>
     </div>
 </template>
 
 <script>
 import TopNav from '../components/topnav'
+import BottomNav from '../components/bottomnav'
 export default {
     name:'Message',
     components:{
-        TopNav
+        TopNav,
+        BottomNav
     }
 }
 </script>
