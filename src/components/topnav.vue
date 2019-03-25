@@ -11,7 +11,7 @@ export default {
 .pinknav{
     width: 100%;
     height: 4rem;
-    background: url('../assets/img/pinknav.png')
+    background: url('../../server/public/images/pinknav.png')
 }
 </style>
 
