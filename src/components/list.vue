@@ -1,10 +1,10 @@
 <template>
     <div class="box" ref="wrapper">
         <ul ref="ul_box">
-            <li v-for="(item,index) in listData " :key="index">
-                <img :src="item" alt="">
+            <router-link tag="li" :to="{name:'Detail',params:{id:item.id,src:item.img}}" v-for="(item,index) in listData " :key="index">
+                <img :src="item.img" alt="">
                 <p>6.18大促</p>               
-            </li>
+            </router-link>
         </ul>
         <loadMore ref="Child"/>
     </div>
@@ -24,18 +24,15 @@ export default {
     },
     mounted(){
         this.getHttp("/banner")
-        this.$refs.Child.loadMore();
-        
+        this.$refs.Child.loadMore();       
         //获取视口高度
         /* const winHeight = document.documentElement.clientHeight;
         window.addEventListener("scroll",function(){
         var scrollHeight = document.documentElement.scrollTop;
-            if(scrollHeight>=winHeight){
-                
+            if(scrollHeight>=winHeight){               
             }        
         }) */  
-        /* this.$nextTick(function () {
-            
+        /* this.$nextTick(function () {            
         }) */
         
     },
@@ -43,10 +40,9 @@ export default {
         getHttp(url){
             this.$axios.get(this.HOST + url)
             .then(data =>{
-                console.log(data.data.banners);
+                //console.log(data.data.banners);
                 
-                //console.log(data);
-                /* this.listData = data.data.banners; */
+                
                 this.listData = this.listData.concat(data.data.banners);
             })
             .catch(error =>{

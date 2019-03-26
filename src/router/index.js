@@ -7,6 +7,7 @@ import Find from '../containers/find'
 import Message from '../containers/message'
 import Buy from '../containers/buy'
 import Mine from '../containers/mine'
+import Detail from '../containers/detail'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/mine',
       name: 'Mine',
       component: Mine
+    },
+    {
+      path: '/detail/:id',
+      name: 'Detail',
+      component: Detail
     }
     
   ]
