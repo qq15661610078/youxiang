@@ -18,8 +18,8 @@
         <div class="minebutton">
             <ul>
                 <li v-for="(item,index) in minebutton" :key="index">
-                    <img :src='item' alt="">
-                    <p>购物车</p>
+                    <img :src='item.img' alt="">
+                    <p>{{item.text}}</p>
                 </li>
             </ul>
         </div>
@@ -42,7 +42,7 @@ export default {
       };
     },
     mounted(){
-        this.$axios.get(this.HOST + '/haidai')
+        this.$axios.get(this.HOST + '/mine')
         .then(res => {
             this.minebutton = res.data.mineimg.minebutton;
         })
