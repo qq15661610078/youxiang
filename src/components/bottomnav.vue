@@ -39,6 +39,8 @@ export default {
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: #fff;
+    z-index: 888
 }
 .bottom-item{
     margin: 0 22px;
