@@ -1,14 +1,14 @@
 <template>
     <div>
-        <Login/>
+        <Loginview/>
     </div>
 </template>
 <script>
-import Login from '../components/loginview'
+import Loginview from '../components/loginview'
 export default {
     name:'Login',
     components:{
-        Login
+        Loginview
     }
 }
 </script>
