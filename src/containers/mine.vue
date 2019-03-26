@@ -1,16 +1,19 @@
 <template>
     <div>
-        <TopNav/>
-        mine
+        <BottomNav/>
+        <MineView/>
     </div>
 </template>
 
 <script>
-import TopNav from '../components/topnav'
+import BottomNav from '../components/bottomnav'
+import MineView from '../components/mineview'
+
 export default {
     name:'Mine',
     components:{
-        TopNav
+        BottomNav,
+        MineView
     }
 }
 </script>

@@ -1,16 +1,21 @@
 <template>
     <div>
         <TopNav/>
-        Home
+        <Tabs />
+        <BottomNav/>
     </div>
 </template>
 
 <script>
 import TopNav from '../components/topnav'
+import Tabs from '../components/tabs'
+import BottomNav from '../components/bottomnav'
 export default {
     name:'Home',
     components:{
-        TopNav
+        TopNav,
+        BottomNav,
+        Tabs
     }
 }
 </script>

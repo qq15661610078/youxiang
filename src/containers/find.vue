@@ -62,17 +62,20 @@
                 <img  class="goBuyImg3"  src="../assets/img/j4.jpg" alt="">
             </div>
         </div>
-        
+         <BottomNav/>
     </div>   
+         
 </template>
 
 <script>
 import TopNav from '../components/topnav'
 
+import BottomNav from '../components/bottomnav'
 export default {
     name:'Find',
     components:{
-        TopNav
+        TopNav,
+        BottomNav
     }
 }
 </script>
@@ -180,4 +183,5 @@ export default {
     position: absolute;
 }
 
+</style>
 </style>
