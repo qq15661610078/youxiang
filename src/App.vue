@@ -5,15 +5,17 @@
 </template>
 
 <script>
+import "./assets/font/iconfont.css"
 import './assets/icon/iconfont.css'
 import TopNav from './components/topnav'
+
 export default {
   name: 'App',
 }
 </script>
 
 <style>
-html, body, div, span, applet, object, iframe,
+html, body, div, span,applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -98,6 +100,8 @@ html, body {
 body {
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #f5f5f5;
 }
+
 
 </style>
