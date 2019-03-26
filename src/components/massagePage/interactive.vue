@@ -1,7 +1,7 @@
 <template>
 <div>
     
-        <ul>
+        <!-- <ul>
 
             <li class="dialog" v-for="(item,index) in page" :key="index" >
                
@@ -18,7 +18,74 @@
                     
                 </div>
             </li>
+<<<<<<< HEAD
         </ul>
+=======
+             <li class="dialog">
+                <div class="HeadPortrait">
+                     <img src="../../assets/img/002.jpg" alt="">
+                </div>
+                <div class="text-right">
+                       <span class="text">Catherinezhu</span>
+                    <span class="time">下午01:46</span>
+                </div>
+            </li>
+             <li class="dialog">
+                <div class="HeadPortrait">
+                     <img src="../../assets/img/003.jpg" alt="">
+                </div>
+                <div class="text-right">
+                     <span class="text">ColorBlocker</span>
+                     <span class="time">下午01:38</span>
+                </div>
+            </li>
+             <li class="dialog">
+                <div class="HeadPortrait">
+                     <img src="../../assets/img/004.jpg" alt="">
+                </div>
+                <div class="text-right">
+                    <span class="text">香芋小姐</span>
+                    <span class="time">上午10:46</span>
+                </div>
+            </li>
+             <li class="dialog">
+                <div class="HeadPortrait">
+                     <img src="../../assets/img/005.jpg" alt="">
+                </div>
+                <div class="text-right">
+                    <span class="text">K.</span>
+                    <span class="time">昨天</span>
+                </div>
+            </li>
+             <li class="dialog">
+                <div class="HeadPortrait">
+                     <img src="../../assets/img/006.jpg" alt="">
+                </div>
+                <div class="text-right">
+                    <span class="text">澳洲代你</span>
+                    <span class="time">昨天</span>
+                </div>
+            </li>
+             <li class="dialog">
+                <div class="HeadPortrait">
+                     <img src="../../assets/img/007.jpg" alt="">
+                </div>
+                <div class="text-right">
+                    <span class="text">小叮韩屋</span>
+                    <span class="time">17/07/03</span>
+                </div>
+            </li>
+             <li class="dialog">
+                <div class="HeadPortrait">
+                     <img src="../../assets/img/008.jpg" alt="">
+                </div>
+                <div class="text-right">
+                    <span class="text">脸很大的兔子</span>
+                    <span class="time">17/07/03</span>
+                </div>
+            </li>
+        </ul> -->
+>>>>>>> 5ed69ad3a29237298d4c3e9d3ce47575b750e171
         
     
 </div>

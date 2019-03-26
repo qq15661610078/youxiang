@@ -59,7 +59,7 @@ export default {
 
 
 </script>
-<style scoped>
+<style>
 .box{
     width: 100%;
     /* padding: 10px; */

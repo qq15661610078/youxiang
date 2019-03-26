@@ -18,7 +18,6 @@ export default {
     components:{
         TopNav,
         Message1,
-    
         BottomNav
     }
 }
