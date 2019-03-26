@@ -8,6 +8,8 @@ import Message from '../containers/message'
 import Buy from '../containers/buy'
 import Mine from '../containers/mine'
 
+import Hudong from "../components/massagePage/dialogue/Details"
+
 Vue.use(Router)
 
 // 使用路由
@@ -32,13 +34,19 @@ export default new Router({
     {
       path: '/message',
       name: 'Message',
-      component: Message
+      component: Message,
     },
     {
       path: '/mine',
       name: 'Mine',
       component: Mine
+    },
+    {
+      path: '/hudong',
+      name: 'Hudong',
+      component: Hudong
     }
+
     
   ]
 })
