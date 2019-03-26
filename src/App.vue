@@ -98,6 +98,7 @@ html, body {
 body {
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #f5f5f5;
 }
 
 </style>
