@@ -12,7 +12,7 @@
                 <i class="iconfont icon-suo"></i>
                 <el-input placeholder="请输入密码" v-model="input11" show-password></el-input>
             </div>
-            <div class="login-button">登录</div>
+            <router-link tag="div" to="/mine" class="login-button">登录</router-link>
         </div>
         <a class="reg" href="#">新人注册</a>
         <a class='forget' href="#">忘记密码</a>

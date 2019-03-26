@@ -7,6 +7,7 @@
 <script>
 import './assets/icon/iconfont.css'
 import TopNav from './components/topnav'
+
 export default {
   name: 'App',
 }
