@@ -9,6 +9,13 @@ import Buy from '../containers/buy'
 import Mine from '../containers/mine'
 import Login from '../containers/login'
 
+import Buyxq1 from "../containers/buyxq1"
+import Buyxq2 from "../containers/buyxq2"
+import Hotxq1 from "../containers/hotxq1"
+import Hotxq2 from "../containers/hotxq2"
+import Hotxq3 from "../containers/hotxq3"
+
+
 Vue.use(Router)
 
 // 使用路由
@@ -23,7 +30,7 @@ export default new Router({
     {
       path: '/find',
       name: 'Find',
-      component: Find
+      component: Find,
     },
     {
       path: '/buy',
@@ -44,6 +51,30 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },{
+      path:"/buyxq1",
+      name:"Buyxq1",
+      component: Buyxq1
+    },
+    {
+      path:"/buyxq2",
+      name: "Buyxq2",
+      component: Buyxq2
+    },
+    {
+      path:"/hotxq1",
+      name: "Hotxq1",
+      component: Hotxq1
+    },
+    {
+      path:"/hotxq2",
+      name: "Hotxq2",
+      component: Hotxq2
+    },
+    {
+      path:"/hotxq3",
+      name: "Hotxq3",
+      component: Hotxq3
     }
     
   ]

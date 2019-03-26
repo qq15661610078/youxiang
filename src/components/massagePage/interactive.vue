@@ -1,7 +1,7 @@
 <template>
 <div>
     
-        <ul>
+        <!-- <ul>
 
             <li class="dialog">
                
@@ -78,7 +78,7 @@
                     <span class="time">17/07/03</span>
                 </div>
             </li>
-        </ul>
+        </ul> -->
         
     
 </div>
