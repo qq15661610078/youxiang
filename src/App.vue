@@ -6,6 +6,7 @@
 
 <script>
 import TopNav from './components/topnav'
+
 export default {
   name: 'App',
 }
