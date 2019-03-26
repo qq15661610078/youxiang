@@ -12,6 +12,7 @@ Vue.use(Router)
 
 // 使用路由
 export default new Router({
+  linkActiveClass:'active',
   routes: [
     {
       path: '/',

@@ -5,7 +5,11 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App'
 import router from './router'
+import Axios from 'axios'
 
+Vue.prototype.$axios = Axios;
+Vue.prototype.HOST = '/api';
+Vue.use(ElementUI);
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
