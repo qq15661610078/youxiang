@@ -6,9 +6,9 @@
         <p></p>
         <p></p>
         <div>
-            <div>收藏</div>
-            <div>加入购物车</div>
-            <div>立即购买</div>
+            <div><i class="iconfont"></i>收藏</div>
+            <div><i class="iconfont"></i>加入购物车</div>
+            <div><i class="iconfont"></i>立即购买</div>
         </div>
     </div>
 </template>

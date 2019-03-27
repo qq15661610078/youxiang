@@ -7,6 +7,7 @@ import Find from '../containers/find'
 import Message from '../containers/message'
 import Buy from '../containers/buy'
 import Mine from '../containers/mine'
+import Detail from '../containers/detail'
 import Login from '../containers/login'
 
 import Buyxq1 from "../containers/buyxq1"
@@ -50,6 +51,11 @@ export default new Router({
       path: '/mine',
       name: 'Mine',
       component: Mine
+    },
+    {
+      path: '/detail/:id',
+      name: 'Detail',
+      component: Detail
     },
     {
       path: '/hudong',

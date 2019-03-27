@@ -11,8 +11,7 @@ export default {
     
     */   
         // 获取元素
-        const wrapper = this.$refs.wrapper;
-        
+        const wrapper = this.$refs.wrapper;       
         // 获取滚动高度
         // var scrollHeight = document.documentElement.scrollTop;
         // console.log(scrollHeight);
@@ -48,7 +47,7 @@ export default {
     render(){
         return(
             <div class="load-more" ref="wrapper">
-               
+               加载中...
             </div>
         )      
     } 
