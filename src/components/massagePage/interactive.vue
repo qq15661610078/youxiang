@@ -1,6 +1,5 @@
 <template>
-<div>
-    
+    <div>
         <ul>
 
             <li class="dialog" v-for="(item,index) in page" :key="index" >
@@ -13,15 +12,12 @@
                     <span class="text">{{item.nicheng}}</span>
                     <span class="time">{{item.time}}</span>
                     <br><br><br>
-                    <span class="text2">{{item.text}}</span>
 
-                    
+                    <span class="text2">{{item.text}}</span>  
                 </div>
             </li>
         </ul>
-        
-    
-</div>
+    </div>
 </template>
 <script>
 
