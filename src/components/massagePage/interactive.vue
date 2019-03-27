@@ -1,5 +1,5 @@
 <template>
-<div>
+    <div>
         <ul>
 
             <li class="dialog" v-for="(item,index) in page" :key="index" >
@@ -16,10 +16,8 @@
                     <span class="text2">{{item.text}}</span>  
                 </div>
             </li>
-        </ul> 
-
-        
-</div>
+        </ul>
+    </div>
 </template>
 <script>
 
