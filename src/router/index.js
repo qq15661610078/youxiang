@@ -16,6 +16,8 @@ import Hotxq2 from "../containers/hotxq2"
 import Hotxq3 from "../containers/hotxq3"
 
 
+import Hudong from "../components/massagePage/dialogue/Details"
+
 Vue.use(Router)
 
 // 使用路由
@@ -40,12 +42,17 @@ export default new Router({
     {
       path: '/message',
       name: 'Message',
-      component: Message
+      component: Message,
     },
     {
       path: '/mine',
       name: 'Mine',
       component: Mine
+    },
+    {
+      path: '/hudong',
+      name: 'Hudong',
+      component: Hudong
     },
     {
       path: '/login',
@@ -76,6 +83,7 @@ export default new Router({
       name: "Hotxq3",
       component: Hotxq3
     }
+
     
   ]
 })

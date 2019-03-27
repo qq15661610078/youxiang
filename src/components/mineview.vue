@@ -93,7 +93,7 @@ export default {
     border-bottom: 1px solid rgb(208,208,208);
 }
 .minebutton li{
-    display: inline-block;
+    float: left;
     margin: 1rem 1.6rem;
 }
 .minebutton img{
@@ -107,7 +107,7 @@ export default {
     font-size: 14px;
     text-align: center;
 }
-.share .el-tabs__item{
+/* .share .el-tabs__item{
     margin: 0 3.2rem;
 }
 .share .el-tabs__active-bar{
@@ -115,7 +115,7 @@ export default {
 }
 .share .is-active{
     color: rgb(238,117,157);
-}
+} */
 
 </style>
 

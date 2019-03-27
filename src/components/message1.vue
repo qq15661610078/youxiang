@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane label="动态" name="first" ></el-tab-pane>
+          <el-tab-pane label="动态" name="first" >动态</el-tab-pane>
           <el-tab-pane label="互动" name="second" >
              <interactive />
           </el-tab-pane>

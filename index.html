@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="./src/assets/icon/iconfont.css">
     <title>0325</title>
+    <script>
+      (function (doc, win) {
+          var docEl = doc.documentElement,
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalc = function () {
+                  var clientWidth = docEl.clientWidth;
+                  if (!clientWidth) return;
+                  if (clientWidth >= 750) {
+                      docEl.style.fontSize = '32px';
+                  } else {
+                      docEl.style.fontSize = 32 * (clientWidth / 750) + 'px';
+                  }
+              };
 
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+  </script>
   </head>
   <body>
     <div id="app"></div>

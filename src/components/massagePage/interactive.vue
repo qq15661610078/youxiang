@@ -1,6 +1,7 @@
 <template>
 <div>
-       <ul>
+        <ul>
+
             <li class="dialog" v-for="(item,index) in page" :key="index" >
                
                 <div class="HeadPortrait">
@@ -11,13 +12,18 @@
                     <span class="text">{{item.nicheng}}</span>
                     <span class="time">{{item.time}}</span>
                     <br><br><br>
+
                     <span class="text2">{{item.text}}</span>  
                 </div>
             </li>
         </ul> 
+
+        
 </div>
 </template>
 <script>
+
+
 
 export default {
     name:'interactive',
@@ -69,6 +75,10 @@ export default {
 .dialog{
     height:70px;
      
+}
+.text-right>.text2{
+    font-size: 15px;
+    color:#938E8F;
 }
 </style>
 
