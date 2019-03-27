@@ -19,7 +19,11 @@ export default {
     position: relative;
     width: 100%;
     height: 4rem;
-    background: url('../../server/public/images/pinknav.png')
+    background: url('../../server/public/images/pinknav.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
 }
 i{
     position: absolute;

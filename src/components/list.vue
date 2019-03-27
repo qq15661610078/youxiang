@@ -55,15 +55,15 @@ export default {
 
 
 </script>
-<style>
+<style scoped>
 .box{
     width: 100%;
+    height: auto;
     /* padding: 10px; */
-    overflow: hidden;
-    
+    /* overflow: hidden; */
 }
 li{
-    width:45%;
+    width:46%;
     float: left;
     
 }
