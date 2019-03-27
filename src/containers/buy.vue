@@ -6,11 +6,11 @@
             <li><img src="../../server/public/images/meizhuang.gif" alt=""><p>彩 妆</p></li>
             <li><img src="../../server/public/images/gerenhuli.gif" alt=""><p>个人护理</p></li>
             <li><img src="../../server/public/images/muying.gif" alt=""><p>母 婴</p></li>
-            <li><img src="../../server/public/images/more.gif" alt=""><p>保 健</p></li>
-            <li><img src="../../server/public/images/baojian.gif" alt=""><p>服 装</p></li>
-            <li><img src="../../server/public/images/fuzhuang.gif" alt=""><p>配 饰</p></li>
-            <li><img src="../../server/public/images/peishi.gif" alt=""><p>家 居</p></li>
-            <li><img src="../../server/public/images/jiaju.gif" alt=""><p>更 多</p></li>
+            <li><img src="../../server/public/images/baojian.gif" alt=""><p>保 健</p></li>
+            <li><img src="../../server/public/images/fuzhuang.gif" alt=""><p>服 装</p></li>
+            <li><img src="../../server/public/images/peishi.gif" alt=""><p>配 饰</p></li>
+            <li><img src="../../server/public/images/jiaju.gif" alt=""><p>家 居</p></li>
+            <router-link  tag="li" to="/buymore"><img src="../../server/public/images/more.gif" alt=""><p>更 多</p></router-link>
         </ul>
         <ShopList />
         <bottomNav />

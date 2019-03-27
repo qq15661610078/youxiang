@@ -11,7 +11,7 @@
     </div>
 </template>
 <script>
-import LoadMore from "./loadmore"
+import LoadMore from "./news"
 
 export default {
     name:"ShopList",
@@ -21,7 +21,7 @@ export default {
     data(){
         return{
         shopListData:[],
-        jj:"s"
+       
         }
     },
     props:{
@@ -55,6 +55,7 @@ export default {
             })
             .then(res => {
                 // this.shopListData = res.data.shopListData;
+                
                 
                 this.shopListData = this.shopListData.concat(res.data.shopListData);
                 

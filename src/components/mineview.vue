@@ -18,15 +18,15 @@
         <div class="minebutton">
             <ul>
                 <li v-for="(item,index) in minebutton" :key="index">
-                    <img :src='item' alt="">
-                    <p>购物车</p>
+                    <img :src='item.img' alt="">
+                    <p>{{item.text}}</p>
                 </li>
             </ul>
         </div>
         <div class="share">
             <el-tabs v-model="activeName">
-                <el-tab-pane label="我的分享" name="first">用户管理</el-tab-pane>
-                <el-tab-pane label="我的求购" name="second">配置管理</el-tab-pane>
+                <el-tab-pane label="我的分享" name="first"></el-tab-pane>
+                <el-tab-pane label="我的求购" name="second"></el-tab-pane>
             </el-tabs>
         </div>
     </div>
@@ -42,7 +42,7 @@ export default {
       };
     },
     mounted(){
-        this.$axios.get(this.HOST + '/haidai')
+        this.$axios.get(this.HOST + '/mine')
         .then(res => {
             this.minebutton = res.data.mineimg.minebutton;
         })
