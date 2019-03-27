@@ -74,6 +74,7 @@ export default {
 .app-tab {
     width: 100%;
     height: 3rem;
+    z-index: 888;
     background-color: white;
     position: fixed;
     top: 4rem;

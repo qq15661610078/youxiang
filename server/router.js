@@ -9,6 +9,7 @@ var bannerData = require('./data/banner.js')
 var buyData = require('./data/buyData.js')
 var hotData = require("./data/hotData.js")
 var moreData = require('./data/more.js')
+var searchData = require('./data/search.js')
 
 router.get('/mine',function(req,res){
     res.send(minedata)
@@ -35,6 +36,9 @@ router.get('/hotdata',function(req,res){
 })
 router.get('/moredata',function(req,res){
     res.send(moreData)
+})
+router.get('/search',function(req,res){
+    res.send(searchData)
 })
 
 module.exports = router;
