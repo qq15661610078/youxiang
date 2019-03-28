@@ -18,7 +18,7 @@ import Hotxq3 from "../containers/hotxq3"
 
 import buyMore from '../containers/buymore'
 
-
+import publicDetail from '../components/publicdetail/publicdetail'
 import Hudong from "../components/massagePage/dialogue/Details"
 
 Vue.use(Router)
@@ -95,6 +95,11 @@ export default new Router({
       path:"/buymore",
       name:"buyMore",
       component:buyMore
+    },
+    {
+      path:"/publicdetail/:id",
+      name:"publicDetail",
+      component:publicDetail
     }
   ]
 })

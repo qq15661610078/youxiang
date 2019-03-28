@@ -1,22 +1,24 @@
 <template>
     <div>
         <div>
-            <div class='shoplist' v-for="(item,index) in shopListData" :key="index">   
+            <router-link :to="{name:'publicDetail',params:{id:item.id}}" tag="div" class='shoplist' v-for="(item,index) in shopListData" :key="index">   
                 <img :src="item.url" alt="">  
-                <p>{{ cutContent(item.content)}}</p>       
-                <span>￥{{item.price}}</span>
-            </div>
+                <div>
+                    <p>{{ cutContent(item.content)}}</p>       
+                    <span>￥{{item.price}}</span>
+                </div>
+            </router-link>
             <LoadMore />   
         </div>
     </div>
 </template>
 <script>
 import LoadMore from "./news"
-
 export default {
     name:"ShopList",
     components:{
-        LoadMore
+        LoadMore,
+
     },
     data(){
         return{
@@ -54,10 +56,9 @@ export default {
             .get(this.HOST + "/shoplist",{
             })
             .then(res => {
-                // this.shopListData = res.data.shopListData;
+                // this.shopListData = res.data.shopList;
                 
-                
-                this.shopListData = this.shopListData.concat(res.data.shopListData);
+                this.shopListData = this.shopListData.concat(res.data.shopList);
                 
             })
             .catch(error => {
@@ -75,24 +76,33 @@ export default {
 <style lang="less" scope>
 .shoplist{
     width:46%;
-    height:15.5rem;
+    // height:15.5rem;
     float:left;
     margin:0.4rem;
     background-color: rgb(255,255,255);
     img{
-        width:80%;
-        height:58%;
-        padding:1.45rem;
+        // width:100%;
+        // height:58%;
+        width:auto;
+        height:auto;
+        max-width:80%;
+        max-height:80%;
+        margin: 1rem 1.5rem;
+        // padding:1.45rem;
     }
-    p{
+    div{
+        margin:1rem auto;
+        p{
         text-align: center;
-        margin:0 1rem 0.5rem;
+        padding:0 2rem 0.5rem;
         color:#363636;
         font-size: 0.85rem
+
     }
     span{
-        margin:0 3rem 0;
+        margin:0 3rem 1rem;
         color:#4375CD
+    }
     }
 }
 </style>

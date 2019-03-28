@@ -1,6 +1,7 @@
 module.exports = {
     msg:"",
-    shopListData:[
+    shopList:[
+        
         {
             id:1,
             url:"http://localhost:3000/images/bag.png",
@@ -30,6 +31,12 @@ module.exports = {
             url:"http://localhost:3000/images/shoes.png",
             content:"彪马女鞋，时尚厚底松糕鞋 舒适休闲鞋",
             price:"669"
+        },
+        {
+            id:6,
+            url:"http://localhost:3000/images/skin.png",
+            content:"开启神仙之旅-SK-II皇牌产品，满分护肤、亮出润肤肌~修护调理、补水嫩白、减淡老化皱纹、细致毛孔、赋活肌肤让皮肤水油平衡，保持一种稳定的状态。",
+            price:"1129"
         }
     ]
     

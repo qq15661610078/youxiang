@@ -3,7 +3,6 @@ var router = express.Router();
 var carouselData = require('./data/carouselData.js')
 var shopListData = require('./data/shopData.js')
 var url = require("url");
-var bannerData = require('./data/banner.js');
 var message = require("./data/message.js");
 
 var minedata = require('./data/minedata.js')
@@ -32,10 +31,22 @@ router.get('/banner',function(req,res){
 router.get('/bannerid',function(req,res){
     var query = url.parse(req.url,true).query;
     var id = query.id;
+    // console.log(id)
     res.send(bannerData.banners.filter(function(group){
         return group && group.id == id;
     }))
 })
+//buy详情页对应id的数据
+router.get('/shoplistid' ,function(req,res){
+    var id = url.parse(req.url,true).query.id;
+        //过滤数据
+    res.send(shopListData.shopList.filter(function(group){
+        return group && group.id == id;
+    }))
+    
+
+})
+
 router.get('/message',function(req,res){
     res.send(message)
 })

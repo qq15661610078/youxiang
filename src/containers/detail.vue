@@ -70,8 +70,9 @@ export default {
             this.detailData = data.data;
             this.title =this.detailData[0].title; 
             this.type = this.detailData[0].img
-            console.log(this.type);
-
+            console.log(this.detailData);
+            
+            
         })
         .catch(error=>{
             console.log(error);
