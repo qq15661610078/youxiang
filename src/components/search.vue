@@ -1,7 +1,7 @@
 <template>
     <div class="search">
         <i class="el-icon-search"></i>
-        <input type="text" placeholder="搜索笔记,商品和代购">
+        <input @focus="focusHandler" type="text" placeholder="搜索笔记,商品和代购">
     </div>
 </template>
 <script>
@@ -10,6 +10,11 @@ export default {
     data(){
         return{
 
+        }
+    },
+    methods:{
+        focusHandler(){
+            this.$router.push('/search')
         }
     }
 

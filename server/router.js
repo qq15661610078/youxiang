@@ -10,6 +10,7 @@ var buyData = require('./data/buyData.js')
 var hotData = require("./data/hotData.js")
 var moreData = require('./data/more.js')
 var searchData = require('./data/search.js')
+var hotsearch = require('./data/hotsearch')
 
 router.get('/mine',function(req,res){
     res.send(minedata)
@@ -39,6 +40,9 @@ router.get('/moredata',function(req,res){
 })
 router.get('/search',function(req,res){
     res.send(searchData)
+})
+router.get('/hotsearch',function(req,res){
+    res.send(hotsearch)
 })
 
 module.exports = router;

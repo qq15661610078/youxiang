@@ -34,7 +34,9 @@
       </ul>
       <div class="content">
         <transition>
-          <div v-show="num == 1">1</div>
+          <div v-show="num == 1">
+            <mineshare/>
+          </div>
         </transition>
         <transition>
           <div v-show="num == 2">2</div>
@@ -45,8 +47,12 @@
 </template>
 
 <script>
+import mineshare from './mineshare'
 export default {
   name: "MineNav",
+  components:{
+    mineshare
+  },
   data() {
     return {
       minebutton: [],
@@ -56,12 +62,12 @@ export default {
   methods: {
     change: function(index) {
       this.num = index;
-    }
+    }, 
   },
   mounted() {
     this.$axios.get(this.HOST + "/mine").then(res => {
       this.minebutton = res.data.mineimg.minebutton;
-    });
+    });  
   }
 };
 </script>
@@ -77,7 +83,7 @@ export default {
   top: 20rem;
   left: 0;
   border-bottom: 1px solid lightgray;
-    border-top: 1px solid lightgray;
+  border-top: 1px solid lightgray;
 }
 
 .app-tab li {
@@ -159,7 +165,7 @@ export default {
 }
 .share .is-active{
     color: rgb(238,117,157);
-} */
+} */ 
 </style>
 
 

@@ -16,6 +16,7 @@ import Hotxq2 from "../containers/hotxq2"
 import Hotxq3 from "../containers/hotxq3"
 import Searchdetail from '../containers/searchdetail'
 import Hudong from "../components/massagePage/dialogue/Details"
+import Xiangshui from '../components/xiangshui'
 
 Vue.use(Router)
 
@@ -91,6 +92,11 @@ export default new Router({
       path:'/search',
       name:'Searchdetail',
       component: Searchdetail
+    },
+    {
+      path:'/xiangshui',
+      name:'Xiangshui',
+      component:Xiangshui
     }
 
     
