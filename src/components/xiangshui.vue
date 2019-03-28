@@ -42,6 +42,7 @@
 </template>
 <script>
 export default {
+    
   name: "Xiangshui",
   methods: {
     clickHandler() {
