@@ -12,7 +12,7 @@
           <img :src="xiangbaoimg" alt>
         </div>
         <p class="content">{{xiangbaotext}}</p>
-        <p>{{discribe}}</p>
+        <p class="text">{{discribe}}</p>
         <p>
           <span>￥{{price}}</span>
         </p>
@@ -104,7 +104,7 @@ export default {
 }
 .choose {
   position: fixed;
-  bottom: 6rem;
+  bottom: 5rem;
   display: flex;
   li {
     float: left;
@@ -118,31 +118,33 @@ export default {
   .shoucang{
       font-size:14px;
           color: #3e3e3e;
-          &:hover{
-            font-weight: bold;
-          }
-          &+.response {
-            font-weight: bold;
-          }
+          // &:hover{
+          //   font-weight: bold;
+          // }
+          // &+.response {
+          //   font-weight: bold;
+          // }
   }
 }
 .detail {
-  p {
-    text-align: left;
-    margin: 1rem 2rem;
+  p{
+    margin-left:1rem;
+    padding:0.5rem  1rem;
   }
-  .content {
-    color: #4375cd;
-  }
-  div {
-    background-color: white;
-    padding: 0 5rem;
-    img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-    }
+  .text {
+      padding: 1rem;
+      line-height: 2rem;
+      }
+
+  div:first-child {
+      background-color: white;
+      padding: 0 5rem;
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
   }
   span {
     color: #4375cd;

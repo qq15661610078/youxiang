@@ -135,8 +135,11 @@ export default {
         color:white;
     }
     .content{
-        font-family: fantasy;
-    }
+            padding: 1rem;
+            line-height: 2rem;
+            margin-bottom: 4rem;
+            height:2rem;
+            }
 }
 .choose{
     position:fixed;
