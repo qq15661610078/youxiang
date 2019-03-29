@@ -15,6 +15,7 @@
         <span v-bind:class="{current: num==3}" v-on:click="change(3)">代购</span>
       </li>
     </ul>
+    
     <div class="content">
       <transition>
         <div v-show="num == 1">1</div>
@@ -22,6 +23,7 @@
       <transition>
         <div v-show="num == 2">
           <div class="xiangshui-blue">#香水是种有个性的气味</div>
+          <div class="empty"></div>
           <Xiangshuiview/>
         </div>
       </transition>
@@ -55,6 +57,13 @@ export default {
 };
 </script>
 <style scoped>
+*{
+  color: rgb(106, 106, 106);
+}
+.empty{
+  width: 100%;
+  height: 7rem;
+}
 .pinknav {
   width: 100%;
   height: 4rem;

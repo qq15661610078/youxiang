@@ -85,6 +85,9 @@ export default {
 }
 </script>
 <style scoped>
+*{
+    color: rgb(110, 110, 110)
+}
 .pinknav{
     position: fixed;
     top: 0;
