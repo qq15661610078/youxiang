@@ -27,8 +27,7 @@ export default {
             
             if (top <= winHeight) {
                 // 再次请求数据
-                _this.$parent.getHttp("/banner");
-                console.log("该加载更多了");
+                _this.$parent.getHttp();
                 
                 
             }

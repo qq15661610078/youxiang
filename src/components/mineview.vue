@@ -34,10 +34,14 @@
       </ul>
       <div class="content">
         <transition>
-          <div v-show="num == 1">1</div>
+          <div v-show="num == 1">
+            <Xiangshuiview/>
+          </div>
         </transition>
         <transition>
-          <div v-show="num == 2">2</div>
+          <div v-show="num == 2">
+            <List/>
+          </div>
         </transition>
       </div>
     </div>
@@ -45,8 +49,14 @@
 </template>
 
 <script>
+import Xiangshuiview from './xiangshuiview'
+import List from './list'
 export default {
   name: "MineNav",
+  components:{
+    Xiangshuiview,
+    List
+  },
   data() {
     return {
       minebutton: [],
@@ -62,7 +72,7 @@ export default {
   methods: {
     change: function(index) {
       this.num = index;
-    }
+    }, 
   },
   mounted() {
     this.$axios.get(this.HOST + "/mine").then(res => {
@@ -79,16 +89,16 @@ export default {
 .app-tab {
   width: 100%;
   height: 3rem;
-  position: fixed;
+  position: absolute;
   top: 20rem;
   left: 0;
   border-bottom: 1px solid lightgray;
-    border-top: 1px solid lightgray;
+  border-top: 1px solid lightgray;
 }
 
 .app-tab li {
   float: left;
-  width: 49%;
+  width: 50%;
   height: 3rem;
   background-color: white;
   cursor: pointer;
@@ -143,29 +153,22 @@ export default {
   background-color: white;
 }
 .minebutton li {
+  width: 25%;
   float: left;
-  margin: 1rem 1.6rem;
+  margin: 1rem 0;
 }
 .minebutton img {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  text-align: center;
+  margin: 0 1.92rem;
 }
 .minebutton p {
   margin: 0.5rem auto;
   font-size: 14px;
   text-align: center;
 }
-/* .share .el-tabs__item{
-    margin: 0 3.2rem;
-}
-.share .el-tabs__active-bar{
-    height: 0;
-}
-.share .is-active{
-    color: rgb(238,117,157);
-} */
+
 </style>
 
 

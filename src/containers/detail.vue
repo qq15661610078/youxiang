@@ -8,20 +8,20 @@
            <img :src="type" alt="">
        </div>
        <div class="head_container">
-           <div class="head_photo">
-
-           </div>
+           <img class='head_photo' :src="touxiang" alt="">
+           <span class="head_nicheng">{{nicheng}}</span>
            <button class="head_button">+&nbsp;关注</button>
+           <p class="head_content">{{content}}</p>
        </div>
        <div class="footnav">
            <div class="zan">              
-                   <i class="el-icon-circle-plus-outline"></i>
+                   <i class="iconfont icon-zan1"></i>
                    <p>
                        <span>赞•</span><span>999</span>                 
                    </p>                 
            </div>
            <div class="comment">              
-                   <i class="el-icon-edit-outline"></i>
+                   <i class="iconfont icon-pinglun"></i>
                    <p>
                        <span>评论•</span><span>88</span>                 
                    </p>                 
@@ -43,7 +43,10 @@ export default {
         return{
             detailData:[],
             title:"",
-            type:""
+            type:"",
+            touxiang:'',
+            nicheng:'',
+            content:''
             
         }       
     },
@@ -68,9 +71,10 @@ export default {
         .then(data=>{
             this.detailData = data.data;
             this.title =this.detailData[0].title; 
-            this.type = this.detailData[0].img
-            //console.log(this.type);
-
+            this.type = this.detailData[0].img;
+            this.touxiang = this.detailData[0].touxiang;
+            this.nicheng = this.detailData[0].nicheng;
+            this.content = this.detailData[0].content;
         })
         .catch(error=>{
             console.log(error);
@@ -86,8 +90,13 @@ export default {
 }
 </script>
 <style scoped>
+*{
+    color: rgb(110, 110, 110)
+}
 .pinknav{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 4rem;
     background: url('../../server/public/images/pinknav.png')
@@ -101,11 +110,15 @@ i{
     z-index: 666
 }
 .pinknav p{
-    position: absolute;
+    /* position: absolute;
     top: 1.5rem;
-    left: 7rem;
+    left: 7rem; */
+    text-align: center;
+    height: 4rem;
+    line-height: 4.7rem;
     font-size: 20px;
     color: aliceblue;
+    
 }
 img{
     width: 100%;
@@ -121,8 +134,13 @@ img{
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: aqua;
     margin-left: 1rem;
+}
+.head_nicheng{
+    color: rgb(150,150,150);
+    position: absolute;
+    top: 1rem;
+    left: 4.5rem;
 }
 .head_button{
     position: absolute;
@@ -134,13 +152,19 @@ img{
     border: 1px solid #FF6B9E;
     border-radius: 3px;
     background-color: #fff;
+    outline-style: none;
+}
+.head_content{
+    padding: 1rem;
+    line-height: 2rem;
+    margin-bottom: 4rem;
 }
 .footnav{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 3rem;
-    background-color: #FF6B9E;
+    height: 3.5rem;
+    background-color: white;
 }
 .footnav div{
     font-size: 16px;   
@@ -153,32 +177,46 @@ img{
     top:-0.9rem;
     background-color:blue;
 }
+.icon-zan1{
+    color: rgb(236,115,155);
+}
 .zan p{
     position: absolute;
-    top: 1.8rem;
+    top: 1.9rem;
     left: 3rem;
+    font-size: 14px;
 }
 .comment{
     position: absolute;
     top:-0.9rem;
     left: 7rem;
-    background-color:red;
+}
+.icon-pinglun{
+    color: black;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 1.7rem;
+    left: 2rem;
 }
 .comment p{
     position: absolute;
-    top: 1.8rem;
-    right: 1rem;
+    top: 1.9rem;
+    left: 3.6rem;
+    font-size: 14px;
 }
 .collect{
     position: absolute;
     top:-0.9rem;
     left: 15rem;
-    background-color:pink;
+    
 }
-
+.collect i{
+    color: rgb(236,115,155);
+}
 .collect p{
     position: absolute;
-    top: 1.8rem;
+    top: 1.9rem;
     left: 3rem;
+    font-size: 14px;
 }
 </style>

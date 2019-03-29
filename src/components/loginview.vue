@@ -99,6 +99,9 @@ export default {
     top: 12rem;
     left: 5rem;
 }
+.username{
+    outline-style: none;
+}
 .login-username,.login-password{
     width: 16rem;
     margin: 1rem 0;

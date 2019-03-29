@@ -27,7 +27,7 @@
     name:'message1',
     data(){
         return {
-            num:1
+            num:2
         }   
     },
     methods:{

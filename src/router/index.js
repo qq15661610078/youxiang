@@ -9,17 +9,14 @@ import Buy from '../containers/buy'
 import Mine from '../containers/mine'
 import Detail from '../containers/detail'
 import Login from '../containers/login'
-
 import Buyxq1 from "../containers/buyxq1"
 import Buyxq2 from "../containers/buyxq2"
 import Hotxq1 from "../containers/hotxq1"
 import Hotxq2 from "../containers/hotxq2"
 import Hotxq3 from "../containers/hotxq3"
-
-
-
-
+import Searchdetail from '../containers/searchdetail'
 import Hudong from "../components/massagePage/dialogue/Details"
+import Xiangshui from '../components/xiangshui'
 
 Vue.use(Router)
 
@@ -90,6 +87,16 @@ export default new Router({
       path:"/hotxq3",
       name: "Hotxq3",
       component: Hotxq3
+    },
+    {
+      path:'/search',
+      name:'Searchdetail',
+      component: Searchdetail
+    },
+    {
+      path:'/xiangshui',
+      name:'Xiangshui',
+      component:Xiangshui
     }
 
     

@@ -9,6 +9,8 @@ var bannerData = require('./data/banner.js')
 var buyData = require('./data/buyData.js')
 var hotData = require("./data/hotData.js")
 var moreData = require('./data/more.js')
+var searchData = require('./data/search.js')
+var hotsearch = require('./data/hotsearch')
 
 var mysqlFn = require("./mysql.js");
 var config = require("./config.js");
@@ -39,6 +41,12 @@ router.get('/hotdata',function(req,res){
 })
 router.get('/moredata',function(req,res){
     res.send(moreData)
+})
+router.get('/search',function(req,res){
+    res.send(searchData)
+})
+router.get('/hotsearch',function(req,res){
+    res.send(hotsearch)
 })
 
 // 查询用户列表

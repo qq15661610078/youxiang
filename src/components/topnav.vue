@@ -1,7 +1,7 @@
 <template>
     <div class="pinknav">
         <Search />
-        <i class="el-icon-message"></i>
+        <i class="iconfont icon-zhaoxiangji"></i>
     </div>
 </template>
 <script>
@@ -27,8 +27,8 @@ export default {
 }
 i{
     position: absolute;
-    top: 2rem;
-    right: 1.8rem;
+    top: 1.8rem;
+    right: 1rem;
     font-size: 22px;
     color: aliceblue;
 }
