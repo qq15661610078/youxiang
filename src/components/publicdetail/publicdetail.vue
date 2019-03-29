@@ -1,6 +1,7 @@
 <template>
-    <div class="onediv">
-        <div class="pinknav">
+    <div>
+        <div class="pinknav" ref="pinknav">
+            <span><i class="el-icon-arrow-left" @click="backHandler"></i></span>
             <p>手提包</p>
         </div>
         <div class="detail" >
@@ -49,8 +50,8 @@ export default {
          .catch(error => {
              console.log(error)
          })
-        
-        
+        // var navheight = this.$refs.pinknav.offsetHeight;
+        // console.log(navheight)
     },
     methods:{
         cutContent(content){
@@ -61,30 +62,42 @@ export default {
         },
         puBuLiu(){
             for(var i=0; i<shopListData.length; i++){
-                
+                console.log('')
             }
-        }
+        },
+        backHandler(){
+            this.$router.push('/buy')
+        },
     }
 }
 
-//瀑布流加载
-var box = document.querySelector('.onediv');
-var dataStr = '{}'
+
 </script>
 <style scope lang="less">
 .pinknav{
     width: 100%;
     height: 4rem;
     background: url('../../../server/public/images/pinknav.png');
+    span{
+            i{
+        position: absolute;
+        top: 1.5rem;
+        left: 1rem;
+        font-size: 25px;
+        color: aliceblue;
+        z-index: 666
+        }
+    }
     p{
         text-align:center;
         font-size:1.25rem;
         padding:1.25rem 4rem;
+        color:white;
     }
 }
 .choose{
     position:fixed;
-    bottom:4rem;
+    bottom:6rem;
     display:flex;
     li{
         float:left;
@@ -95,12 +108,7 @@ var dataStr = '{}'
         font-size: 10rem;
         color:red;
     }
-    .shoucang{
-
-    }
-    .buy{
-
-    }
+    
     
 }
 .detail{

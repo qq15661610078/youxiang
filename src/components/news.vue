@@ -33,8 +33,18 @@ export default {
     
   },
   render() {
-    return <div class="box-wrapper" ref="box">加载中...<hr /></div>;
+    return <div class="box-wrapper" ref="box"><p>加载中...</p></div>;
   }
 };
 </script>
+<style scop lang="less">
+.box-wrapper{
+    color:#757575;
+    
+    p{
+      text-align: center;
+      font-size: 1rem;
+    }
+}
+</style>
 

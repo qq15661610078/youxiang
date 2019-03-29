@@ -10,6 +10,7 @@
 import TopNav from '../components/topnav'
 import Tabs from '../components/tabs'
 import BottomNav from '../components/bottomnav'
+
 export default {
     name:'Home',
     components:{
@@ -21,6 +22,7 @@ export default {
 </script>
 
 <style scoped>
+
 
 </style>
 

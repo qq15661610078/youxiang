@@ -81,7 +81,9 @@ export default {
 </script>
 
 <style scoped>
-
+.bgColor{
+    margin-top: 4rem;
+}
 .find-buy{
     height: 10rem;
     background-color:white;

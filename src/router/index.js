@@ -9,7 +9,6 @@ import Buy from '../containers/buy'
 import Mine from '../containers/mine'
 import Detail from '../containers/detail'
 import Login from '../containers/login'
-
 import Buyxq1 from "../containers/buyxq1"
 import Buyxq2 from "../containers/buyxq2"
 import Hotxq1 from "../containers/hotxq1"
@@ -19,13 +18,14 @@ import Hotxq3 from "../containers/hotxq3"
 import buyMore from '../containers/buymore'
 
 import publicDetail from '../components/publicdetail/publicdetail'
+import Searchdetail from '../containers/searchdetail'
 import Hudong from "../components/massagePage/dialogue/Details"
 
 Vue.use(Router)
 
 // 使用路由
 export default new Router({
-  linkActiveClass:'active',
+  linkActiveClass: 'active',
   routes: [
     {
       path: '/',
@@ -66,40 +66,45 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
-    },{
-      path:"/buyxq1",
-      name:"Buyxq1",
+    }, {
+      path: "/buyxq1",
+      name: "Buyxq1",
       component: Buyxq1
     },
     {
-      path:"/buyxq2",
+      path: "/buyxq2",
       name: "Buyxq2",
       component: Buyxq2
     },
     {
-      path:"/hotxq1",
+      path: "/hotxq1",
       name: "Hotxq1",
       component: Hotxq1
     },
     {
-      path:"/hotxq2",
+      path: "/hotxq2",
       name: "Hotxq2",
       component: Hotxq2
     },
     {
-      path:"/hotxq3",
+      path: "/hotxq3",
       name: "Hotxq3",
       component: Hotxq3
     },
     {
-      path:"/buymore",
-      name:"buyMore",
-      component:buyMore
+      path: "/buymore",
+      name: "buyMore",
+      component: buyMore
     },
     {
-      path:"/publicdetail/:id",
-      name:"publicDetail",
-      component:publicDetail
+      path: "/publicdetail/:id",
+      name: "publicDetail",
+      component: publicDetail
+    },
+    {
+      path: '/search',
+      name: 'Searchdetail',
+      component: Searchdetail
     }
   ]
 })

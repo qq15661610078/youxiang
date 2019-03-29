@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="pinknav">
-      <span><i class="iconfont"></i></span>
+      <span><i class="el-icon-arrow-left" @click="backHandler"></i></span>
       <p>更多</p>
     </div>
     <div class="more-box">
@@ -38,8 +38,8 @@
   </div>
 </template>
 <script>
-// import TopNav from "../components/topnav";
-// import LoadMore from "../components/news";
+import TopNav from "../components/topnav";
+import LoadMore from "../components/news";
 import BottomNav from "../components/bottomnav";
 
 export default {
@@ -85,7 +85,10 @@ export default {
         .catch(error => {
           console.log(error);
         });
-    }
+    },
+    backHandler(){
+            this.$router.push('/buy')
+        },
   },
 
   components: {
@@ -103,7 +106,24 @@ export default {
     position: relative;
     width: 100%;
     height: 4rem;
-    background: url('../../server/public/images/pinknav.png')
+    background: url('../../server/public/images/pinknav.png');
+    span{
+            i{
+        position: absolute;
+        top: 1.5rem;
+        left: 1rem;
+        font-size: 25px;
+        color: aliceblue;
+        z-index: 666;
+        }
+    }
+    p{
+        text-align:center;
+        font-size:1.25rem;
+        padding:1.25rem 4rem;
+        color:white;
+    }
+    
 }
 div {
   background-color: white;
@@ -128,7 +148,7 @@ div {
         img {
           width: 90%;
           height: 5rem;
-          padding-bottom: 0.25rem 0.25rem;
+          padding: 0.25rem 0.25rem ;
         }
       }
     }
