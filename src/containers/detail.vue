@@ -183,21 +183,32 @@ img{
     top:-0.9rem;
     left: 7rem;
 }
+.icon-pinglun{
+    color: black;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 1.7rem;
+    left: 2rem;
+}
 .comment p{
     position: absolute;
-    top: 1.8rem;
-    right: 1rem;
+    top: 1.9rem;
+    left: 3.6rem;
+    font-size: 14px;
 }
 .collect{
     position: absolute;
     top:-0.9rem;
     left: 15rem;
-    background-color:pink;
+    
 }
-
+.collect i{
+    color: rgb(236,115,155);
+}
 .collect p{
     position: absolute;
-    top: 1.8rem;
+    top: 1.9rem;
     left: 3rem;
+    font-size: 14px;
 }
 </style>

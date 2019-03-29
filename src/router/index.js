@@ -20,6 +20,7 @@ import buyMore from '../containers/buymore'
 import publicDetail from '../components/publicdetail/publicdetail'
 import Searchdetail from '../containers/searchdetail'
 import Hudong from "../components/massagePage/dialogue/Details"
+import Xiangshui from '../components/xiangshui'
 
 Vue.use(Router)
 
@@ -105,6 +106,11 @@ export default new Router({
       path: '/search',
       name: 'Searchdetail',
       component: Searchdetail
+    },
+    {
+      path:'/xiangshui',
+      name:'Xiangshui',
+      component:Xiangshui
     }
   ]
 })
