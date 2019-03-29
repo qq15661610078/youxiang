@@ -29,6 +29,9 @@ router.get('/mine',function(req,res){
 router.get('/banner',function(req,res){
     res.send(bannerData)
 })
+router.get('/buymore',function(req,res){
+    res.send(moreData)
+})
 //获取对应id的数据
 router.get('/bannerid',function(req,res){
     var query = url.parse(req.url,true).query;
@@ -45,10 +48,16 @@ router.get('/shoplistid' ,function(req,res){
     res.send(shopListData.shopList.filter(function(group){
         return group && group.id == id;
     }))
-    
-
 })
-
+//morebuy详情页对应id的数据
+router.get('/morebuyid',function(req,res){
+    var query = url.parse(req.url,true).query;
+    var id = query.id;
+    res.send(moreData.xiangbao.filter(function(group){
+        return group && group.id == id;
+    }))
+    
+})
 router.get('/message',function(req,res){
     res.send(message)
 })

@@ -21,6 +21,7 @@ import publicDetail from '../components/publicdetail/publicdetail'
 import Searchdetail from '../containers/searchdetail'
 import Hudong from "../components/massagePage/dialogue/Details"
 import Xiangshui from '../components/xiangshui'
+import BuyMoreDetail from '../containers/buymoredetail'
 
 Vue.use(Router)
 
@@ -101,6 +102,11 @@ export default new Router({
       path: "/publicdetail/:id",
       name: "publicDetail",
       component: publicDetail
+    },
+    {
+      path: "/buymoredetail/:id",
+      name: "BuyMoreDetail",
+      component: BuyMoreDetail
     },
     {
       path: '/search',

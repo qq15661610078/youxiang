@@ -4,35 +4,37 @@
       <span><i class="el-icon-arrow-left" @click="backHandler"></i></span>
       <p>更多</p>
     </div>
-    <div class="more-box">
+    <div class="navheight">
+        <div class="more-box">
       <p class="bag">箱包</p>
       <ul>
-        <li v-for="(item,index) in xiangbaoData" :key="index">
+        <router-link tag="li" :to="{name:'BuyMoreDetail',params:{id:item.id}}" v-for="(item,index) in xiangbaoData" :key="index">
           <img :src="item.xiangbaoimg" alt>
           <p>{{item.xiangbaotext}}</p>
-        </li>
+        </router-link>
       </ul>
     </div>
     <div class="more-box">
       <p class="bag">鞋靴</p>
       <ul>
-        <li v-for="(item,index) in xiexueData" :key="index">
+        <router-link tag="li" :to="{name:'BuyMoreDetail',params:{id:item.id}}" v-for="(item,index) in xiexueData" :key="index">
           <img :src="item.xiexueimg" alt>
           <p>{{item.xiexuetext}}</p>
-        </li>
+        </router-link>
       </ul>
     </div>
     <div class="more-box">
       <p class="bag">数码</p>
       <ul>
-        <li v-for="(item,index) in shumaData" :key="index">
+        <router-link tag="li" :to="{name:'BuyMoreDetail',params:{id:item.id}}" v-for="(item,index) in shumaData" :key="index">
           <img :src="item.shumaimg" alt>
           <p>{{item.shumatext}}</p>
-        </li>
+        </router-link>
       </ul>
     </div>
     <!-- <LoadMore/> -->
     <p class="more">没有更多了....</p>
+    </div>
     
     <bottomNav/>
   </div>
@@ -80,7 +82,6 @@ export default {
           this.xiexueData = res.data.xiexue;
           this.shumaData = res.data.shuma;
 
-          //   console.log("lala")
         })
         .catch(error => {
           console.log(error);
@@ -103,10 +104,11 @@ export default {
 </script>
 <style  lang="less" scope>
 .pinknav{
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 4rem;
     background: url('../../server/public/images/pinknav.png');
+    z-index: 22;
     span{
             i{
         position: absolute;
@@ -124,6 +126,10 @@ export default {
         color:white;
     }
     
+}
+.navheight {
+  position: absolute;
+  top: 4rem;
 }
 div {
   background-color: white;
