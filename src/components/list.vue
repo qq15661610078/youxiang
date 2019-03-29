@@ -67,6 +67,9 @@ export default {
 
 </script>
 <style scoped>
+*{
+    color: rgb(110, 110, 110);
+}
 .box{
     width: 100%;
     height: auto;
