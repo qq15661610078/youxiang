@@ -103,8 +103,9 @@ export default {
   }
 }
 .choose {
-  position: fixed;
-  bottom: 5rem;
+  // position: fixed;
+  // bottom: 5rem;
+  margin:2rem 0rem;
   display: flex;
   li {
     float: left;
