@@ -28,7 +28,7 @@ export default {
         }
     },
     mounted(){
-        this.getHttp("/banner")
+        this.getHttp()
         this.$refs.Child.loadMore();       
         //获取视口高度
         /* const winHeight = document.documentElement.clientHeight;
@@ -42,8 +42,8 @@ export default {
         
     },
     methods:{
-        getHttp(url){
-            this.$axios.get(this.HOST + url)
+        getHttp(){
+            this.$axios.get(this.HOST + '/banner')
             .then(data =>{
                 //console.log(data.data.banners);
                 

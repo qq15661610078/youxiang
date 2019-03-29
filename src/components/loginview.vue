@@ -6,7 +6,7 @@
         <div class="login-input">
             <div class="login-username">
                 <i class="iconfont icon-shouji"></i>
-                <el-input v-model="input" placeholder="请输入用户名"></el-input>
+                <el-input class='username' v-model="input" placeholder="请输入用户名"></el-input>
             </div>
             <div class="login-password">
                 <i class="iconfont icon-suo"></i>
@@ -58,6 +58,9 @@ export default {
     position: absolute;
     top: 12rem;
     left: 5rem;
+}
+.username{
+    outline-style: none;
 }
 .login-username,.login-password{
     width: 16rem;

@@ -2,7 +2,7 @@
   <div>
     <div class="pinknav">
       <i @click="clickHandler" class="iconfont icon-houtui"></i>
-      <p>{{title}}</p>
+      <p>香水</p>
     </div>
     <ul class="app-tab">
       <li>
@@ -22,16 +22,7 @@
       <transition>
         <div v-show="num == 2">
           <div class="xiangshui-blue">#香水是种有个性的气味</div>
-          <div class="good">
-            <div class="good-content" v-for="(item,index) in xiangshuidata" :key="index">
-              <img class="good-pic" :src="item.pic" alt>
-              <p class="good-name">{{item.name}}</p>
-              <p class="good-price">{{item.price}}</p>
-              <img class="good-flag" :src="item.flag" alt>
-              <span class="good-country">{{item.country}}</span>
-              <span class="good-nicheng">{{item.nicheng}}</span>
-            </div>
-          </div>
+          <Xiangshuiview/>
         </div>
       </transition>
       <transition>
@@ -41,9 +32,13 @@
   </div>
 </template>
 <script>
+import Xiangshuiview from './xiangshuiview'
 export default {
     
   name: "Xiangshui",
+  components:{
+    Xiangshuiview
+  },
   methods: {
     clickHandler() {
       window.history.back();
@@ -54,16 +49,8 @@ export default {
   },
   data() {
     return {
-      num: 2,
-      title: "",
-      xiangshuidata: []
+      num: 2
     };
-  },
-  created() {
-    this.$axios.get(this.HOST + "/hotsearch").then(res => {
-      (this.title = res.data.xiangshui.title),
-        (this.xiangshuidata = res.data.xiangshui.data);
-    });
   }
 };
 </script>
@@ -134,25 +121,7 @@ export default {
   top: 4rem;
   left: 0;
 }
-.good {
-  margin-top: 9rem;
-  box-sizing: border-box;
-}
-.good-content {
-  width: 45%;
-  height: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  background-color: white;
-}
-.good-pic {
-  width: 100%;
-}
-.good-flag {
-    width: 2rem;
-}
+
 </style>
 
 
