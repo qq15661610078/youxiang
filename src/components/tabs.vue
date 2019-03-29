@@ -84,7 +84,7 @@ export default {
  
 .app-tab li {
   float: left;
-  width: 16%;
+  width: 16.6%;
   height: 3rem;
   background-color: white;
   cursor: pointer;
