@@ -10,7 +10,9 @@
                 <img :src="url"  alt="">
             </div>
             <p class="content">{{content}}</p>
+            <hr>
             <p><span>￥{{price}}</span></p>
+            <hr>
             <p>其他</p>
         </div>
         
@@ -83,6 +85,10 @@ export default {
 </script>
 <style scope lang="less">
 .navheight {
+    hr{
+        margin:0 1rem;
+        
+    }
   position: absolute;
   top: 4rem;
   .detail{
@@ -128,10 +134,13 @@ export default {
         padding:1.25rem 4rem;
         color:white;
     }
+    .content{
+        font-family: fantasy;
+    }
 }
 .choose{
     position:fixed;
-    bottom:6rem;
+    bottom:4rem;
     display:flex;
     li{
         float:left;

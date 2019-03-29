@@ -14,11 +14,14 @@ export default {
     name:"Carousel",
     data() {
         return {
+            
             swiperOption: {
+                    autoplay:true,
                     pagination: {
                         el: ".swiper-pagination"
                     },
-                    loop: true
+                    loop: true,
+                    
             },
             SwiperImgData:[]
         };
