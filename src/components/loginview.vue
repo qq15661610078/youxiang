@@ -6,13 +6,14 @@
         <div class="login-input">
             <div class="login-username">
                 <i class="iconfont icon-shouji"></i>
-                <el-input v-model="input" placeholder="请输入用户名"></el-input>
+                <el-input v-model="userName" placeholder="请输入用户名" ></el-input>
             </div>
             <div class="login-password">
                 <i class="iconfont icon-suo"></i>
-                <el-input placeholder="请输入密码" v-model="input11" show-password></el-input>
+                <el-input placeholder="请输入密码" v-model="pwd" show-password></el-input>
             </div>
-            <router-link tag="div" to="/mine" class="login-button">登录</router-link>
+            <div class="login-button" @click="loginHandler">登录</div>
+            
         </div>
         <a class="reg" href="#">新人注册</a>
         <a class='forget' href="#">忘记密码</a>
@@ -20,17 +21,20 @@
             <i class="iconfont icon-qq"></i>
             <i class="iconfont icon-ai-weixin"></i>
             <i class="iconfont icon-xinlangweibo"></i>
+            {{getUser}}
         </div>
     </div>
 </template>
 <script>
+import { mapGetters,mapActions } from "vuex"
+import qs from "querystring"
 export default {
     name:'Login',
     data(){
         return{
             loginhead:'',
-            input:'',
-            input11:''
+            userName:'',
+            pwd:''
         }
     },
     created(){
@@ -38,7 +42,43 @@ export default {
         .then(res => {
             this.loginhead = res.data.mineimg.minetouxiang
         })
-    }
+    },
+    
+    methods:{
+        ...mapActions(["setUserActions"]),
+        
+        /* inputHandler(){
+         var userame = this.userName;
+         var password = this.pwd;
+         console.log(userame);
+        }, */
+        loginHandler(event){
+            event.preventDefault();
+            //登陆网络请求
+            this.$axios.post("/api/login",qs.stringify({               
+                    username:this.userName,
+                    password:this.pwd               
+            }))
+            .then(res=>{
+                if(!res.data.msg){
+                    console.log(res.data);
+                    this.$parent.flag = true;
+                    this.setUserActions(this.userName);
+                    localStorage.setItem("uname",encodeURIComponent(this.userName))
+                    this.$emit("getName",this.userName)
+                }else{
+                    window.alert("用户名或密码错误");                    
+                }
+            })
+            .catch(error=>{
+                console.log(error);               
+            })           
+        }
+    },
+    computed:{
+    ...mapGetters(["getUser"])
+  }
+    
 }
 </script>
 

@@ -10,6 +10,10 @@ var buyData = require('./data/buyData.js')
 var hotData = require("./data/hotData.js")
 var moreData = require('./data/more.js')
 
+var mysqlFn = require("./mysql.js");
+var config = require("./config.js");
+urlObj = config.urlObj;
+
 router.get('/mine',function(req,res){
     res.send(minedata)
 })
@@ -36,5 +40,54 @@ router.get('/hotdata',function(req,res){
 router.get('/moredata',function(req,res){
     res.send(moreData)
 })
+
+// 查询用户列表
+router.get(urlObj.userList, function (req, res) {
+    // 创建查询语句
+    var sql = "select * from student";
+    mysqlFn(sql, null, function (data) {
+        res.send(data);
+    })
+})
+// 登陆
+router.post(urlObj.login, function (req, res) {
+    // 用户名和密码
+    var username = req.body.username;
+    var password = req.body.password;
+
+    var sql = "SELECT * FROM student WHERE `username`=? AND `password`=?"
+    var params = [username, password];
+    mysqlFn(sql, params, function (data) {
+        if (data.length > 0) {
+            res.send(data);
+        } else {
+            res.send({
+                msg: "用户名密码错误"
+            })
+        }
+    })
+});
+
+
+// 注册
+router.post(urlObj.register, function (req, res) {
+    var re_username = req.body.username;
+    var re_password = req.body.password;
+    var sql = "insert into student values(null,?,?)";
+    var params = [re_username, re_password];
+    mysqlFn(sql, params, function (data) {
+        // 判断是否成功
+        if (data.affectedRows > 0) {
+            res.send({
+                msg: "注册成功"
+            })
+        } else {
+            res.send({
+                msg: "注册失败"
+            })
+        }
+    })
+
+});
 
 module.exports = router;

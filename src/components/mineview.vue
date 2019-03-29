@@ -2,7 +2,7 @@
   <div class="mineview">
     <div class="mineimg">
       <div class="touxiang"></div>
-      <p class="username">Daisy</p>
+      <p class="username">{{userName}}</p>
       <div class="userinfo">
         <span class="guanzhu">
           关注
@@ -53,6 +53,12 @@ export default {
       num: 1
     };
   },
+  props:{
+    userName:{
+      type:String,
+      default:""
+    }
+  },
   methods: {
     change: function(index) {
       this.num = index;
@@ -61,7 +67,7 @@ export default {
   mounted() {
     this.$axios.get(this.HOST + "/mine").then(res => {
       this.minebutton = res.data.mineimg.minebutton;
-    });
+    })
   }
 };
 </script>
