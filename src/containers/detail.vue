@@ -55,14 +55,13 @@ export default {
             this.$router.push('/')
         },
         collectHandler(){
-            let span = document.getElementById("collect_id");            
-            var storage=window.localStorage;            
-            storage.setItem("span.innerHTML",span.innerHTML++);
-            
-            
+            var span = document.getElementById("collect_id");             
+            span.innerHTML++;          
+            localStorage.setItem("mytoken",span.innerHTML);  
         }
     },
     components:{
+
     },
     mounted(){
         const id = this.$route.params.id;
@@ -81,6 +80,12 @@ export default {
             console.log(error);
             
         })
+        var span = document.getElementById("collect_id"); 
+        var span_value = localStorage.getItem("mytoken");
+        //console.log(span_value);
+        
+        
+        span.innerHTML =  localStorage.getItem("mytoken");
     }
 }
 </script>

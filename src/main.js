@@ -7,6 +7,7 @@ import Axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css';
 
+import store from "./store"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
@@ -19,6 +20,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'
